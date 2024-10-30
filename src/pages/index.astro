@@ -1,16 +1,135 @@
 ---
-
+import HomeTitle from "../components/HomeTitle.astro";
+import Html from "../components/Html.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Html>
+  <HomeTitle />
+  <div class="card">
+    <div id="notice">
+      <h3 class="font-2xl"><em>AL_WG2024</em></h3><br />
+      <h2 class="font-3xl">This branch has been TERMINATED.</h2>
+
+      <div id="message" class="font-m">
+        Dearest Recorders and Observers of Accord's Library.<br /><br />
+
+        These past few years have been a pleasure, but we regret to inform you
+        all that we've been contacted by the Square Enix's Legal Team. And after
+        some private communications, based on the outlined requirements we have
+        come to the conclusion that Accord's Library must close its doors. While
+        we are sad to have to go, we also must respect the wishes of the Legal
+        Team.<br /><br />
+
+        We hope to continue spending time with you all, and other fans in the
+        future through our <a href="/discord">Discord server</a>, which we are
+        keeping opened.<br /><br />
+
+        On behalf of the entire Council for Accord's Library, we sincerely thank
+        you for your support and friendship over the years. We hope that you
+        will continue to use the Discord, though we understand if this is where
+        we part ways.<br /><br />
+
+        From the very bottom of our hearts, we will be forever grateful to
+        everyone who's volunteered their time to help build Accord's Library
+        into what it was. Thank you to all of our Transcribers, Translators, and
+        most of all, all of you for sticking with us. Take care of yourselves
+        out there. <br /><br />
+
+        Glory to Mankind.<br /><br />
+
+        — The Accord's Library Council
+      </div>
+    </div>
+  </div>
+
+  <hr />
+
+  <div id="full">
+    <h2 class="font-3xl">Memorial</h2>
+    <div id="message" class="font-m">
+      We still own the domain name until July 2025 so we were thinking about
+      hosting this memorial page until then.
+      <br /><br />
+
+      If there is any message, tweet, or artworks you would like to share here
+      you can submit it on our Discord server on the <code>#memorial</code> channel.
+      <br /><br />
+
+      Artworks can be anything DrakeNieR / Yoko Taro related (although we think
+      would be quite fitting to give Accord some love). If you submit a message
+      or an artwork, please indicate what name you want to be credited under and
+      optionally a link to your social page or blog.
+    </div>
+
+    <div class="grid">
+      <blockquote class="twitter-tweet" data-dnt="true" data-theme="dark">
+        <p lang="en" dir="ltr">
+          Thank you to those who worked hard to organize the website. I was able
+          to learn so much about the world that I love! I&#39;m still a new
+          artist, so this piece is quite rough, but I put a lot of love into
+          drawing it. In the future when I&#39;m a much better artist, I&#39;d
+          love to redraw it
+        </p>&mdash; potatopotatotomatopotato (@potetotometoes) <a
+          href="https://twitter.com/potetotometoes/status/1851208670748582108?ref_src=twsrc%5Etfw"
+          >October 29, 2024</a
+        >
+      </blockquote>
+    </div>
+  </div>
+
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"
+  ></script>
+</Html>
+
+<style>
+  .card {
+    display: flex;
+    place-content: center;
+    place-items: center;
+    padding-top: clamp(0.5em, 5vw, 5em);
+  }
+
+  #notice {
+    flex-direction: column;
+
+    background-color: #312820;
+    padding-block: clamp(2em, 4vw, 4em);
+    padding-inline: clamp(1em, 5vw, 5em);
+    border-radius: clamp(0.5em, 2vw, 2em);
+  }
+
+  #full {
+    flex-direction: column;
+    background-color: #312820;
+    padding-block: clamp(1em, 4vw, 4em);
+    padding-inline: clamp(1em, 5vw, 5em);
+    border-radius: clamp(0.5em, 2vw, 2em);
+  }
+
+  h3 {
+    font-family: monospace;
+  }
+
+  #message {
+    margin-top: 3em;
+    font-family: monospace;
+    font-weight: normal;
+    max-width: 35em;
+    line-height: 1.5;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: clamp(6px, 2vmin, 16px);
+    align-items: start;
+    width: 100%;
+    margin-top: 4em;
+  }
+
+  hr {
+    border: none;
+    border-top: 3px dotted var(--color-base-350);
+    margin-block: clamp(64px, 10vw, 128px);
+  }
+</style>

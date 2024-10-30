@@ -1,0 +1,225 @@
+---
+
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href=`https://fonts.googleapis.com/css2\
+?family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900\
+&family=Noto+Serif:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900\
+&display=swap`
+      rel="stylesheet"
+    />
+    <title>Accord’s Library</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --font-size-increase: (2px + min(0.4vw, 5px));
+    --font-size-xs: 12px;
+    --font-size-s: 14px;
+    --font-size-m: 16px;
+    --font-size-l: calc(16px + var(--font-size-increase) * 0.4);
+    --font-size-xl: calc(16px + var(--font-size-increase) * 0.9);
+    --font-size-2xl: calc(16px + var(--font-size-increase) * 1.6);
+    --font-size-3xl: calc(16px + var(--font-size-increase) * 2.5);
+    --font-size-4xl: calc(16px + var(--font-size-increase) * 3.5);
+    --font-size-5xl: calc(16px + var(--font-size-increase) * 7.5);
+
+    --color-base-1000: #ebeae7;
+    --color-base-950: #eae5e0;
+    --color-base-900: #e8dfd8;
+    --color-base-850: #e4d1c4;
+    --color-base-800: #e0bfaa;
+    --color-base-750: #dcb095;
+    --color-base-700: #d4a07f;
+    --color-base-650: #cb916c;
+    --color-base-600: #bf835d;
+    --color-base-550: #b07751;
+    --color-base-500: #a06b48;
+    --color-base-450: #8f5f40;
+    --color-base-400: #7d5539;
+    --color-base-350: #6b4a33;
+    --color-base-300: #5c412e;
+    --color-base-250: #4a3728;
+    --color-base-200: #3a2d22;
+    --color-base-175: #312820;
+    --color-base-150: #27231e;
+    --color-base-100: #1c1b16;
+    --color-base-50: #11110d;
+    --color-base-0: #000000;
+  }
+
+  html {
+    font-family: "Noto Sans", "Noto Sans JP", sans-serif;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+    text-size-adjust: 100%;
+    background-color: #27231e;
+    color: #ebeae7;
+  }
+
+  .font-serif {
+    font-family: "Noto Serif", "Noto Serif JP", serif;
+    font-stretch: 100%;
+    font-weight: 430;
+    letter-spacing: -0.055em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  button,
+  body,
+  html,
+  hr {
+    padding: 0;
+    margin: 0;
+    overflow-wrap: anywhere;
+  }
+
+  a {
+    color: var(--color-base-650);
+    text-decoration: underline dotted 0.1em var(--color-base-650);
+    font-weight: 600;
+    text-underline-offset: 0.2em;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--color-base-850);
+      text-decoration-color: var(--color-base-750);
+    }
+
+    &:active {
+      color: var(--color-base-1000);
+      text-decoration-color: var(--color-base-1000);
+    }
+  }
+
+  body {
+    margin: clamp(12px, 3vmin, 24px) clamp(24px, 4vw, 64px);
+  }
+
+  .font-xs {
+    font-size: var(--font-size-xs);
+    letter-spacing: -0.02em;
+    font-stretch: 85%;
+    font-weight: 500;
+
+    &.font-serif {
+      font-stretch: 74%;
+    }
+  }
+
+  .font-s {
+    font-size: var(--font-size-s);
+    letter-spacing: -0.02em;
+    font-stretch: 92%;
+    font-weight: 450;
+
+    &.font-serif {
+      font-stretch: 84%;
+    }
+  }
+
+  .font-m {
+    font-size: var(--font-size-m);
+    letter-spacing: -0.02em;
+    font-stretch: 93%;
+    font-weight: 450;
+
+    &.font-serif {
+      font-stretch: 85%;
+    }
+  }
+
+  .font-l,
+  .prose > h6 {
+    font-size: var(--font-size-l);
+    letter-spacing: -0.02em;
+    font-stretch: 95%;
+    font-weight: 600;
+
+    &.font-serif {
+      font-stretch: 87%;
+    }
+  }
+
+  .font-xl,
+  .prose > h5 {
+    font-size: var(--font-size-xl);
+    letter-spacing: -0.02em;
+    font-stretch: 95%;
+    font-weight: 700;
+
+    &.font-serif {
+      font-stretch: 87%;
+    }
+  }
+
+  .font-2xl,
+  .prose > h4 {
+    font-size: var(--font-size-2xl);
+    letter-spacing: -0.02em;
+    font-stretch: 95%;
+    font-weight: 750;
+
+    &.font-serif {
+      letter-spacing: -0.03em;
+      font-stretch: 89%;
+    }
+  }
+
+  .font-3xl,
+  .prose > h3 {
+    font-size: var(--font-size-3xl);
+    letter-spacing: -0.025em;
+    font-stretch: 95%;
+    font-weight: 800;
+
+    &.font-serif {
+      letter-spacing: -0.03em;
+      font-stretch: 87%;
+    }
+  }
+
+  .font-4xl,
+  .prose > h2 {
+    font-size: var(--font-size-4xl);
+    letter-spacing: -0.03em;
+    font-stretch: 95%;
+    font-weight: 900;
+
+    &.font-serif {
+      letter-spacing: -0.04em;
+      font-stretch: 89%;
+    }
+  }
+
+  .font-5xl,
+  .prose > h1 {
+    font-size: var(--font-size-5xl);
+    letter-spacing: -0.03em;
+    font-stretch: 95%;
+    font-weight: 900;
+
+    &.font-serif {
+      letter-spacing: -0.04em;
+      font-stretch: 89%;
+    }
+  }
+</style>
