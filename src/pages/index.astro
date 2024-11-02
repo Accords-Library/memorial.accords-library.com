@@ -5,6 +5,7 @@ import RockerReplicantImage from "../images/20200424_2121472.jpg";
 import FlowerPodImage from "../images/Warriors_of_Light.png";
 import YukiImage from "../images/yuki.png";
 import VessImage from "../images/Illustration35_1.png";
+import AngelImage from "../images/GbUdvtpWgAA3Og0.jpg";
 import HomeTitle from "../components/HomeTitle.astro";
 import Html from "../components/Html.astro";
 ---
@@ -79,12 +80,9 @@ import Html from "../components/Html.astro";
           so this piece is quite rough, but I put a lot of love into drawing it.
           In the future when I'm a much better artist, I'd love to redraw it
         </p>
-        <p class="cite">
-          —<a
-            href="https://twitter.com/potetotometoes/status/1851208670748582108"
-            >@potetotometoes
-          </a>
-        </p>
+        <a href="https://twitter.com/potetotometoes/status/1851208670748582108">
+          <p class="cite">—@potetotometoes</p>
+        </a>
       </div>
       <div>
         <p>
@@ -609,6 +607,18 @@ import Html from "../components/Html.astro";
         </p>
         <p class="cite">—TheVoyager</p>
       </div>
+      <div>
+        <p>
+          Farewell, Accord’s Library. I hope to see you again someday, but until
+          then I’d like to say, thank you for everything!
+        </p>
+        <a href="https://twitter.com/bingqiux/status/1852419534025846827">
+          <Image src={AngelImage} alt="Submission by @bingqiux" />
+        </a>
+        <a href="https://twitter.com/bingqiux/status/1852419534025846827">
+          <p class="cite">—@bingqiux</p>
+        </a>
+      </div>
     </div>
   </div>
 </Html>
@@ -687,16 +697,20 @@ import Html from "../components/Html.astro";
     break-inside: avoid;
   }
 
-  .grid > div > img {
+  .grid > div img {
     width: 100%;
     height: auto;
+  }
+
+  .grid > div > a {
+    display: block;
   }
 
   .grid > div > * + * {
     margin-top: 1em;
   }
 
-  .grid > div > .cite {
+  .grid > div .cite {
     text-align: end;
     color: var(--color-base-800);
     font-style: oblique;
