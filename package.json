@@ -14,14 +14,14 @@
     "upgrade": "npx @astrojs/upgrade && ncu"
   },
   "dependencies": {
-    "astro": "^6.1.5"
+    "astro": "^7.3.2"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.8",
-    "@astrojs/upgrade": "^0.7.1",
-    "npm-check-updates": "^20.0.0",
-    "prettier": "^3.8.1",
-    "prettier-plugin-astro": "^0.14.1",
-    "typescript": "^5.9.3"
+    "@astrojs/check": "^0.9.10",
+    "@astrojs/upgrade": "^0.7.4",
+    "npm-check-updates": "^23.1.0",
+    "prettier": "^3.9.6",
+    "prettier-plugin-astro": "^1.0.0",
+    "typescript": "^6"
   }
 }
